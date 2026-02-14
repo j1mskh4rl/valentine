@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hi Love 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio src="music.mp3" autoplay loop></audio>
+
+  <div class="card">
+    <h1>Hi love 🐱💖</h1>
+    <img src="cat1.gif">
+    <p>I made something special for you. Please click the button below 🥹</p>
+    <button onclick="location.href='page2.html'">Proceed 💕</button>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>
