@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Our Memories 💞</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio src="music.mp3" autoplay loop></audio>
+
+  <div class="card">
+    <h1>Us 🐾</h1>
+    <img src="cat2.gif">
+    <p>Every memory with you is special to me.</p>
+    <button onclick="location.href='page3.html'">One Last Message 💝</button>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>
