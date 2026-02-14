@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💌</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio src="music.mp3" autoplay loop></audio>
+
+  <div class="card">
+    <h1>Happy Valentine’s Day 💖</h1>
+    <p id="typewriter"></p>
+  </div>
+
+  <script>
+    const text = `Hello, ik we’re confused this days im really sorry but i really loved you more than i can express my feelings, my absences hoping you realized everytime that i look to our pictures i see more than lovers i see future in you and about my peace i really wanted to offer love over peace cause im used to it already and i dont want to go back there and i hope you have no regrets on me cause im really trying to become better and give you the best i could ik all sounds cringe because we are too young pa but yeah wala nay laing ga matter saako and wala nakoy laing ganahan pa bisag kinsa pay i compara and dili napud ko ganahan mag sayang sayang sa oras but yk loving me is not forcing you huhu cause i dont want it if napugos rakas ako kay ma guilty ko so yeah taas ra kaayu ni nya sorry pd sa kalibug nako sabta lang usa kay puhon masabut ranimo tanan like unsa nako g sabut imong personality huhu and yeah i really loved you and i like you all in one nana!
+
+I will love you without expecting payback,
+I would do good no matter how bad it hurts,
+I would rather change than look for another!!
+
+Isaiah 60:22, Proverbs 18:22
+Nothing is impossible with GOD – Luke 1:37`;
+
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 25);
+      }
+    }
+    typeWriter();
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>
