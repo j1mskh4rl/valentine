@@ -11,21 +11,6 @@ body {
   text-align: center;
   overflow: hidden;
 }
-
-.rotating {
-  display: block;
-  margin: 20px auto;  /* centers the image */
-  width: 200px;        /* adjust to your desired size */
-  height: 200px;       /* optional, maintains size */
-  border-radius: 10px; /* optional, for rounded corners */
-  animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .card {
   background: white;
   padding: 24px;
